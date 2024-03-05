@@ -11,22 +11,30 @@ Y:
   type: pandas.CSVDataset
   filepath: data/01_raw/y.csv
 
-XY:
-  type: pandas.CSVDataset
-  filepath: data/02_preprocessed/xy.csv
-
-XYLength:
-  type: pandas.CSVDataset
-  filepath: data/03_medium/xylength.csv
-
 Z:
   type: pandas.CSVDataset
-  filepath: data/01_raw/z.csv
+  filepath: data/01_raw/Z.csv
 
-XYZ:
+X_scaled:
   type: pandas.CSVDataset
-  filepath: data/04_result/xyzlength.csv
+  filepath: data/02_scaled/x.csv
+
+Y_scaled:
+  type: pandas.CSVDataset
+  filepath: data/02_scaled/y.csv
+
+Z_scaled:
+  type: pandas.CSVDataset
+  filepath: data/02_scaled/z.csv
+
+XYZ_merged:
+  type: pandas.CSVDataset
+  filepath: data/03_merged/xyz.csv
 
 XYZLength:
   type: pandas.CSVDataset
-  filepath: data/04_result/xyzlength.csv
+  filepath: data/04_final/xyzlength.csv
+
+null_counter:
+  type: pandas.CSVDataset
+  filepath: data/04_final/nulls.csv

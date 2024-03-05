@@ -1,0 +1,12 @@
+X:
+  parameters:
+    scale: 2
+
+
+Y:
+  parameters:
+    scale: 4
+
+Z:
+  parameters:
+    scale: 3
