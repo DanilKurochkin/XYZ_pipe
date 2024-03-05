@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+#scaler аналогичен по смыслу тому что в xy
 def merge_xyz(xy : pd.DataFrame, z : pd.DataFrame, params):
     z *= params['Z_scaler']
     merged_df = pd.concat([xy, z], axis=1)
@@ -8,6 +9,7 @@ def merge_xyz(xy : pd.DataFrame, z : pd.DataFrame, params):
     
     return merged_df
 
+#пересчитываем длину уже для трехмерной системы коориднат
 def calculate_length(df : pd.DataFrame):
     df['Length'] = np.sqrt(df['Length']**2 + df['Z']**2)
     df = df[['X', 'Y', 'Z', 'Length']]
