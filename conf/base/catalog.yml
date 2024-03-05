@@ -1,0 +1,32 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+X:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/x.csv
+
+Y:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/y.csv
+
+XY:
+  type: pandas.CSVDataset
+  filepath: data/02_preprocessed/xy.csv
+
+XYLength:
+  type: pandas.CSVDataset
+  filepath: data/03_medium/xylength.csv
+
+Z:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/z.csv
+
+XYZ:
+  type: pandas.CSVDataset
+  filepath: data/04_result/xyzlength.csv
+
+XYZLength:
+  type: pandas.CSVDataset
+  filepath: data/04_result/xyzlength.csv
