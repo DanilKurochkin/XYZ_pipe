@@ -7,7 +7,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         [
             node(
                 func = merge_xyz,
-                inputs=["XYLength", "Z"],
+                inputs=["XYLength", "Z", "params:Z_parameters"],
                 outputs="XYZ",
                 name="XYZmerger"
             ),

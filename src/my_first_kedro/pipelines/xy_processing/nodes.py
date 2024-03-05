@@ -1,7 +1,9 @@
 import numpy as np
 import pandas as pd
 
-def merge_xy(x : pd.DataFrame, y : pd.DataFrame):
+def merge_xy(x : pd.DataFrame, y : pd.DataFrame, params):
+    x *= params['X_scaler']
+    y *= params['Y_scaler']
     merged_df = pd.concat([x, y], axis=1)
     merged_df.fillna(value=0)
     
